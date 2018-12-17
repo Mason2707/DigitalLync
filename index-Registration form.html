@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<h2 style = "text-align:center;color:black">Registration form</h1>
+	</head>
+
+	<body>
+		<center>
+		<form>
+			Username: <input type= "text" id="username"> <br><br>
+			Password: <input type= "password" id="password"> <br><br>
+			Email: <input type= "email" id="email"><br><br>
+			DOB: <input type="date" id="date"><br><br>
+			Male: <input type="radio" name="gender" value="male">
+			Female: <input type="radio" name="gender" value="female"><br><br>
+			Qualification: <select id="qualification">
+				<option value="Btech">Btech</option>
+				<option value="Mtech">Mtech</option>
+				<option value="MCA">MCA</option>
+					</select> <br><br>
+			<input type="checkbox" id="tandc">I agree to Terms & Conditions<br><br>
+			<button onclick="dataHandler()">Register Me </button> 
+		</form>
+		</center>
+
+		<script>
+		function dataHandler()
+		{
+			event.preventDefault();
+			var username=document.getElementById("username").value;
+			var password=document.getElementById("password").value;
+			var email=document.getElementById("email").value;
+			var dob=document.getElementById("date").value;
+			var qualification=document.getElementById("qualification").value;
+			console.log(username);
+			alert(username+" "+email+" "+dob+" "+qualification);
+		}
+		</script>	
+
+	</body>
+</html>
